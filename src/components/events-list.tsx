@@ -6,7 +6,6 @@ type EventListProps = {
 };
 
 export default function EventsList({ events }: EventListProps) {
-  console.log(events[0]);
   return (
     <section className="max-w-[1100px] flex flex-wrap gap-10 justify-center px[20px]">
       {events.map((event) => (
