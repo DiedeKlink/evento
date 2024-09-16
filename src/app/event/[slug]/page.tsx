@@ -1,5 +1,7 @@
 import H1 from "@/components/h1";
 import { EventoEvent } from "@/lib/types";
+import { capitalize } from "@/lib/utils";
+import { Metadata } from "next";
 import Image from "next/image";
 
 type EventPageProps = {
@@ -7,6 +9,20 @@ type EventPageProps = {
     slug: string;
   };
 };
+
+export function generateMetadata({ params }: EventPageProps): Metadata {
+  const slug = params.slug;
+
+  const capitalizedSlug = slug
+    .split("-")
+    .map((word) => capitalize(word))
+    .join(" ");
+
+  return {
+    title: `Event: ${capitalizedSlug}`,
+    description: `Details of the event ${capitalizedSlug}`,
+  };
+}
 
 export default async function EventPage({ params }: EventPageProps) {
   const slug = params.slug;
