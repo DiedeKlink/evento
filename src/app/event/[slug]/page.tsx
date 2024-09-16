@@ -22,6 +22,17 @@ export async function generateMetadata({
   };
 }
 
+export async function generateStaticParams() {
+  return [
+    {
+      slug: "comedy-extravaganza",
+    },
+    {
+      slug: "dj-practice-session",
+    },
+  ];
+}
+
 export default async function EventPage({ params }: EventPageProps) {
   const slug = params.slug;
 
