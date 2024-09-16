@@ -1,3 +1,4 @@
+import H1 from "@/components/h1";
 import SkeletonCard from "@/components/skeleton-card";
 
 export default function Loading() {
