@@ -13,7 +13,7 @@ export default function EventCard({ event }: EventCardProps) {
       href={`/event/${event.slug}`}
     >
       <section
-        className="flex w-full h-full flex-col  bg-white/[3%] rounded-xl overflow-hidden relative hover:scale-105 active:scale-[1.02] transition"
+        className="flex w-full h-full flex-col  bg-white/[3%] rounded-xl overflow-hidden relative state-effect"
         key={event.id}
       >
         <Image
