@@ -1,5 +1,8 @@
+import BackButton from "@/components/back-button";
 import H1 from "@/components/h1";
 import { getEvent } from "@/lib/server-utils";
+import { btnStyles } from "@/lib/utils";
+import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -90,6 +93,9 @@ export default async function EventPage({ params }: EventPageProps) {
           <SectionHeading>Location</SectionHeading>
           <SectionContent>{event.location}</SectionContent>
         </Section>
+        <div className="max-w-4xl mx-auto">
+          <BackButton className="mx-auto">Back to events</BackButton>
+        </div>
       </div>
     </main>
   );
